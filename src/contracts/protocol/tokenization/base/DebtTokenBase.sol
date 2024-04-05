@@ -98,7 +98,9 @@ abstract contract DebtTokenBase is
 
     emit BorrowAllowanceDelegated(delegator, delegatee, _underlyingAsset, newAllowance);
   }
-
+  /////////////////////////////////////////////////////////////
+  ///////////////////////Transfer Debt/////////////////////////
+  /////////////////////////////////////////////////////////////
   function transferDebt(address delegator, address fromUser, address toUser, uint256 amount) public {
     require(delegator != address(0), "DebtToken: delegator should not be zero address");
     require(fromUser != address(0), "DebtToken: sender should not be zero address");
